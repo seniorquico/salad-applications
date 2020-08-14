@@ -1,11 +1,12 @@
+import { Tag } from 'domelementtype'
+import { DomElement } from 'domhandler'
 import React, { Component, ReactElement } from 'react'
+import ReactHtmlParser from 'react-html-parser'
 import withStyles, { WithStyles } from 'react-jss'
+import { SmartLink } from '../../../components'
 import { SaladTheme } from '../../../SaladTheme'
 import { Reward } from '../../reward/models'
-import { SmartLink } from '../../../components'
 import { RewardDetailsContentPanel } from './RewardDetailsContentPanel'
-import ReactHtmlParser from 'react-html-parser'
-import { DomElement } from 'htmlparser2'
 
 const styles = (theme: SaladTheme) => ({
   titleText: {
@@ -26,19 +27,21 @@ interface Props extends WithStyles<typeof styles> {
 }
 
 class _RewardDescriptionPanel extends Component<Props> {
-  transform = (node: DomElement): ReactElement | void | null => {
-    //Transform a tags to external links
-    if (node.type === 'tag' && node.name === 'a') {
+  transform(node: DomElement): ReactElement | undefined {
+    // Transform `a` tags to external links.
+    if (node.type === Tag && node.name === 'a') {
+      const data = node.children != null && node.children.length > 0 ? node.children[0].data : ''
+      const href = node.attribs != null ? node.attribs['href'] : undefined
       return (
-        <SmartLink key={node.children[0].data} to={node.attribs.href}>
-          {node.children[0].data}
+        <SmartLink key={data} to={href}>
+          {data}
         </SmartLink>
       )
-    } else {
-      //Return the default
-      return undefined
     }
+
+    return undefined
   }
+
   render() {
     const { reward, classes } = this.props
 

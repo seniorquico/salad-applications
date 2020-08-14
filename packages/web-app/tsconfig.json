@@ -20,8 +20,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5",
-    "types": ["jest"]
+    "target": "es5"
   },
   "include": ["./src/**/*"]
 }

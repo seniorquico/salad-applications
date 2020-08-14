@@ -9,7 +9,7 @@ Note: The Salad Desktop Application currently only supports Windows 7 and 10. Li
 To run the Desktop Application in development mode run
 
 ```
-yarn start
+yarn run start
 ```
 
 ## Architecture

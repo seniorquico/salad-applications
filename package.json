@@ -1,10 +1,45 @@
 {
   "name": "@saladtech/salad-applications",
-  "version": "1.0.0",
   "private": true,
-  "engineStrict": true,
-  "engines": {
-    "node": "12.18.2",
-    "yarn": ">=1.22.0"
+  "description": "Salad Applications",
+  "homepage": "https://www.salad.io",
+  "bugs": {
+    "url": "https://github.com/SaladTechnologies/salad-applications/issues",
+    "email": "support@salad.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SaladTechnologies/salad-applications.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Salad Chefs",
+    "email": "dev@salad.io",
+    "url": "https://www.salad.io"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint-package-json": "npx sort-package-json \"package.json\" \"packages/*/package.json\""
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "@yarnpkg/pnpify": "2.1.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-compat": "3.8.0",
+    "eslint-plugin-flowtype": "4.6.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "2.0.5",
+    "react-scripts": "3.4.3",
+    "typescript": "3.9.7"
   }
 }

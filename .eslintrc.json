@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:compat/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "root": true,
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
