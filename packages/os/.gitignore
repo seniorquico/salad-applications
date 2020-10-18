@@ -2,6 +2,12 @@
 /packages.json
 /session-store.db
 /sessions
+.pnp.*
 .swp
 .tern-*
+.yarn/*
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 node_modules

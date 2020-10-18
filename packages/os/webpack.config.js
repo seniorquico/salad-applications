@@ -35,32 +35,28 @@ module.exports = {
     rules: [
       {
         test: /\.(gif|jpe?g|png|svg|webp)$/,
-        use: ['file-loader'],
+        type: 'asset/resource',
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         include: /fontsource/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'fonts/[name].[ext]',
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
       },
       {
         test: /\.(c|sa|sc)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: require.resolve('css-loader'),
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: 'sass-loader',
+            loader: require.resolve('sass-loader'),
             options: {
               sourceMap: true,
             },
@@ -70,12 +66,20 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+          },
+        ],
       },
       {
         test: /\.js$/,
         enforce: 'pre',
-        use: ['source-map-loader'],
+        use: [
+          {
+            loader: require.resolve('source-map-loader'),
+          },
+        ],
       },
     ],
   },

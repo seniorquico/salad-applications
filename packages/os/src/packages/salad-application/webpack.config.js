@@ -6,14 +6,18 @@ const mode = (process.env.NODE_ENV || 'development').toLowerCase()
 module.exports = {
   mode,
   output: {
-    publicPath: `/app/${metadata.name}/`,
+    publicPath: `/apps/${metadata.name}/`,
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+          },
+        ],
       },
     ],
   },
@@ -21,5 +25,5 @@ module.exports = {
   externals: {
     osjs: 'OSjs',
   },
-  plugins: [new CopyWebpackPlugin(['icon.png'])],
+  plugins: [new CopyWebpackPlugin({ patterns: ['icon.png'] })],
 }
