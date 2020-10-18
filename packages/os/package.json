@@ -1,0 +1,87 @@
+{
+  "name": "@saladtechnologies/os",
+  "version": "0.1.0",
+  "description": "A web-based OS emulator",
+  "homepage": "https://www.salad.io/",
+  "bugs": {
+    "url": "https://feedback.salad.io/bugs",
+    "email": "support@salad.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/SaladTechnologies/salad-applications.git",
+    "directory": "packages/os"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Salad Chefs",
+    "email": "dev@salad.io",
+    "url": "https://www.salad.io"
+  },
+  "main": "src/client/index.js",
+  "scripts": {
+    "build": "webpack",
+    "package:discover": "osjs-cli package:discover",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "@osjs/calculator-application": "^1.2.8",
+    "@osjs/cli": "^3.0.25",
+    "@osjs/client": "^3.1.68",
+    "@osjs/dialogs": "^3.0.20",
+    "@osjs/freedesktop-sounds": "^3.0.3",
+    "@osjs/gnome-icons": "^4.0.5",
+    "@osjs/gui": "^4.0.34",
+    "@osjs/panels": "^3.0.28",
+    "@osjs/settings-application": "^1.1.6",
+    "@osjs/standard-theme": "^4.0.9",
+    "@osjs/standard-dark-theme": "^4.0.11",
+    "fontsource-roboto": "^3.0.3",
+    "hyperapp": "^1.2.10"
+  },
+  "devDependencies": {
+    "@osjs/dev-meta": "^1.1.2",
+    "html-webpack-plugin": "^4.5.0",
+    "source-map-loader": "^1.1.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": "@osjs/eslint-config",
+    "parserOptions": {
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "rules": {
+      "linebreak-style": "off",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "prettier": {
+    "endOfLine": "auto",
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "stylelint": {
+    "extends": "@osjs/stylelint-config"
+  }
+}

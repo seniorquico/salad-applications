@@ -1,0 +1,15 @@
+{
+  "type": "application",
+  "name": "Salad",
+  "category": "utilities",
+  "singleton": true,
+  "autostart": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Salad"
+  },
+  "description": {
+    "en_EN": "Salad"
+  },
+  "files": ["main.js"]
+}

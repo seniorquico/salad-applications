@@ -1,0 +1,69 @@
+{
+  "name": "@saladtechnologies/os-salad-application",
+  "version": "0.1.0",
+  "description": "A Salad web application wrapper for the web-based OS emulator",
+  "homepage": "https://www.salad.io/",
+  "bugs": {
+    "url": "https://feedback.salad.io/bugs",
+    "email": "support@salad.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/SaladTechnologies/salad-applications.git",
+    "directory": "packages/os/src/packages/salad-application"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Salad Chefs",
+    "email": "dev@salad.io",
+    "url": "https://www.salad.io"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "@osjs/dev-meta": "^1.1.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": "@osjs/eslint-config",
+    "parserOptions": {
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "rules": {
+      "linebreak-style": "off",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "osjs": {
+    "type": "package"
+  },
+  "prettier": {
+    "endOfLine": "auto",
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
