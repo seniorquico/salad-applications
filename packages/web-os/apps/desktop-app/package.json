@@ -20,7 +20,8 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "cross-env NODE_ENV=production webpack",
+    "clean": "rimraf dist",
     "watch": "webpack --watch"
   },
   "devDependencies": {
@@ -78,5 +79,9 @@
   },
   "stylelint": {
     "extends": "@osjs/stylelint-config"
+  },
+  "dependencies": {
+    "cross-env": "7.0.2",
+    "rimraf": "3.0.2"
   }
 }

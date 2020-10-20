@@ -20,7 +20,8 @@
   },
   "main": "src/client/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "cross-env NODE_ENV=production webpack",
+    "clean": "rimraf dist packages.json",
     "package:discover": "osjs-cli package:discover",
     "watch": "webpack --watch"
   },
@@ -39,8 +40,10 @@
     "@saladtechnologies/web-os-desktop-app": "workspace:*",
     "@yarnpkg/fslib": "2.3.0",
     "@yarnpkg/libzip": "2.2.1",
+    "cross-env": "7.0.2",
     "fontsource-roboto": "3.0.3",
-    "hyperapp": "1.2.10"
+    "hyperapp": "1.2.10",
+    "rimraf": "3.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
