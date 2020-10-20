@@ -1,5 +1,5 @@
 {
-  "name": "@saladtechnologies/os-salad-application",
+  "name": "@saladtechnologies/web-os-desktop-app",
   "version": "0.1.0",
   "description": "A Salad web application wrapper for the web-based OS emulator",
   "homepage": "https://www.salad.io/",
@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/SaladTechnologies/salad-applications.git",
-    "directory": "packages/os/src/packages/salad-application"
+    "url": "https://github.com/SaladTechnologies/salad-applications.git",
+    "directory": "packages/web-os/apps/desktop-app"
   },
   "license": "MIT",
   "author": {

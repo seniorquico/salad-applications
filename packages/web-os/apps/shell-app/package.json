@@ -1,5 +1,5 @@
 {
-  "name": "@saladtechnologies/os",
+  "name": "@saladtechnologies/web-os-shell-app",
   "version": "0.1.0",
   "description": "A web-based OS emulator",
   "homepage": "https://www.salad.io/",
@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/SaladTechnologies/salad-applications.git",
-    "directory": "packages/os"
+    "url": "https://github.com/SaladTechnologies/salad-applications.git",
+    "directory": "packages/web-os/apps/shell-app"
   },
   "license": "MIT",
   "author": {
@@ -36,30 +36,11 @@
     "@osjs/settings-application": "1.1.6",
     "@osjs/standard-dark-theme": "4.0.11",
     "@osjs/standard-theme": "4.0.9",
+    "@saladtechnologies/web-os-desktop-app": "workspace:*",
     "@yarnpkg/fslib": "2.3.0",
     "@yarnpkg/libzip": "2.2.1",
     "fontsource-roboto": "3.0.3",
     "hyperapp": "1.2.10"
-  },
-  "dependenciesMeta": {
-    "@osjs/calculator-application@1.2.8": {
-      "unplugged": true
-    },
-    "@osjs/freedesktop-sounds@3.0.3": {
-      "unplugged": true
-    },
-    "@osjs/gnome-icons@4.0.5": {
-      "unplugged": true
-    },
-    "@osjs/settings-application@1.1.6": {
-      "unplugged": true
-    },
-    "@osjs/standard-dark-theme@4.0.11": {
-      "unplugged": true
-    },
-    "@osjs/standard-theme@4.0.9": {
-      "unplugged": true
-    }
   },
   "devDependencies": {
     "@babel/core": "7.12.3",

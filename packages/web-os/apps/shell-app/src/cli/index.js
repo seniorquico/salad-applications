@@ -31,6 +31,6 @@ if (process.versions.pnp) {
 }
 
 module.exports = {
-  discover: [...pnpPaths, path.resolve(__dirname, '../packages')],
+  discover: pnpPaths,
   tasks: [],
 }

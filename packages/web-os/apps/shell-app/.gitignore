@@ -1,0 +1,6 @@
+/.env*
+/packages.json
+/session-store.db
+/sessions
+.swp
+.tern-*
