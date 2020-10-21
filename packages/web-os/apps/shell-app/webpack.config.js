@@ -35,6 +35,14 @@ module.exports = {
     rules: [
       {
         test: /\.(gif|jpe?g|png|svg|webp)$/,
+        include: /@osjs/,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]',
+        },
+      },
+      {
+        test: /\.(gif|jpe?g|png|svg|webp)$/,
         type: 'asset/resource',
       },
       {
